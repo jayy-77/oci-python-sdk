@@ -1536,6 +1536,9 @@ class DashxApisClient(object):
 
             Allowed values are: "timeCreated", "displayName"
 
+        :param str compartment_id_in_subtree: (optional)
+            This parameter applies only when compartmentId is root compartment. When set to true, all accessible resources will be returned. Default is false.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -1575,7 +1578,8 @@ class DashxApisClient(object):
             "limit",
             "page",
             "sort_order",
-            "sort_by"
+            "sort_by",
+            "compartment_id_in_subtree"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -1602,7 +1606,8 @@ class DashxApisClient(object):
             "limit": kwargs.get("limit", missing),
             "page": kwargs.get("page", missing),
             "sortOrder": kwargs.get("sort_order", missing),
-            "sortBy": kwargs.get("sort_by", missing)
+            "sortBy": kwargs.get("sort_by", missing),
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -1677,6 +1682,9 @@ class DashxApisClient(object):
 
             Allowed values are: "timeCreated", "displayName"
 
+        :param str compartment_id_in_subtree: (optional)
+            This parameter applies only when compartmentId is root compartment. When set to true, all accessible resources will be returned. Default is false.
+
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
 
@@ -1716,7 +1724,8 @@ class DashxApisClient(object):
             "limit",
             "page",
             "sort_order",
-            "sort_by"
+            "sort_by",
+            "compartment_id_in_subtree"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -1743,7 +1752,8 @@ class DashxApisClient(object):
             "limit": kwargs.get("limit", missing),
             "page": kwargs.get("page", missing),
             "sortOrder": kwargs.get("sort_order", missing),
-            "sortBy": kwargs.get("sort_by", missing)
+            "sortBy": kwargs.get("sort_by", missing),
+            "compartmentIdInSubtree": kwargs.get("compartment_id_in_subtree", missing)
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 

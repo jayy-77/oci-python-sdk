@@ -1192,14 +1192,16 @@ class NetworkFirewallClient(object):
 
     def bulk_upload_nat_rules(self, network_firewall_policy_id, bulk_upload_nat_rules_details, **kwargs):
         """
-        Creates a new NAT Rule at bulk for the Network Firewall Policy.
+        Creates a new `NAT rule`__ at bulk for the Network Firewall policy.
+
+        __ https://docs.cloud.oracle.com/iaas/Content/network-firewall/policies.htm#network-firewall-policies__nat
 
 
         :param str network_firewall_policy_id: (required)
             Unique Network Firewall Policy identifier
 
         :param stream bulk_upload_nat_rules_details: (required)
-            Request Details to create the NAT Rule for the Network Firewall Policy Resource.
+            Request details to create the NAT rule for the Network Firewall policy resource.
 
         :param str opc_retry_token: (optional)
             A token that uniquely identifies a request so it can be retried in case of a timeout or
@@ -1253,7 +1255,7 @@ class NetworkFirewallClient(object):
         resource_path = "/networkFirewallPolicies/{networkFirewallPolicyId}/natRules/actions/bulkUpload"
         method = "POST"
         operation_name = "bulk_upload_nat_rules"
-        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/network-firewall/20230501/natRule/BulkUploadNatRules"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/network-firewall/20230501/NatRule/BulkUploadNatRules"
 
         # Don't accept unknown kwargs
         expected_kwargs = [
@@ -3345,14 +3347,16 @@ class NetworkFirewallClient(object):
 
     def create_nat_rule(self, network_firewall_policy_id, create_nat_rule_details, **kwargs):
         """
-        Creates a new NAT Rule for the Network Firewall Policy.
+        Creates a new `NAT rule`__ for the Network Firewall policy.
+
+        __ https://docs.cloud.oracle.com/iaas/Content/network-firewall/policies.htm#network-firewall-policies__nat
 
 
         :param str network_firewall_policy_id: (required)
             Unique Network Firewall Policy identifier
 
         :param oci.network_firewall.models.CreateNatRuleDetails create_nat_rule_details: (required)
-            Request Details to create NAT rule under a Network Firewall Policy Resource.
+            Request details used to create NAT rule under a Network Firewall policy resource.
 
         :param str opc_retry_token: (optional)
             A token that uniquely identifies a request so it can be retried in case of a timeout or
@@ -4971,14 +4975,16 @@ class NetworkFirewallClient(object):
 
     def delete_nat_rule(self, network_firewall_policy_id, nat_rule_name, **kwargs):
         """
-        Deletes a NAT Rule resource with the given identifier.
+        Deletes a `NAT rule`__ resource with the given identifier.
+
+        __ https://docs.cloud.oracle.com/iaas/Content/network-firewall/policies.htm#network-firewall-policies__nat
 
 
         :param str network_firewall_policy_id: (required)
             Unique Network Firewall Policy identifier
 
         :param str nat_rule_name: (required)
-            Unique identifier for NAT Rules in the network firewall policy.
+            Unique identifier for NAT rules in the Network Firewall policy.
 
         :param str if_match: (optional)
             For optimistic concurrency control. In the PUT or DELETE call
@@ -6595,14 +6601,16 @@ class NetworkFirewallClient(object):
 
     def get_nat_rule(self, network_firewall_policy_id, nat_rule_name, **kwargs):
         """
-        Get NAT Rule by the given name in the context of network firewall policy.
+        Get a `NAT rule`__ by the given name in the context of Network Firewall policy.
+
+        __ https://docs.cloud.oracle.com/iaas/Content/network-firewall/policies.htm#network-firewall-policies__nat
 
 
         :param str network_firewall_policy_id: (required)
             Unique Network Firewall Policy identifier
 
         :param str nat_rule_name: (required)
-            Unique identifier for NAT Rules in the network firewall policy.
+            Unique identifier for NAT rules in the Network Firewall policy.
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -8511,7 +8519,9 @@ class NetworkFirewallClient(object):
 
     def list_nat_rules(self, network_firewall_policy_id, **kwargs):
         """
-        Returns a list of NAT Rules for the Network Firewall Policy.
+        Returns a list of `NAT rules`__ for the Network Firewall policy.
+
+        __ https://docs.cloud.oracle.com/iaas/Content/network-firewall/policies.htm#network-firewall-policies__nat
 
 
         :param str network_firewall_policy_id: (required)
@@ -8540,7 +8550,7 @@ class NetworkFirewallClient(object):
             A filter to return only resources that match the entire display name given.
 
         :param int nat_rule_priority_order: (optional)
-            Unique priority order for NAT Rules in the network firewall policy.
+            Unique priority order for NAT rules in the Network Firewall policy.
 
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
@@ -11108,14 +11118,16 @@ class NetworkFirewallClient(object):
 
     def update_nat_rule(self, network_firewall_policy_id, nat_rule_name, update_nat_rule_details, **kwargs):
         """
-        Updates the NAT Rule with the given name in the network firewall policy.
+        Updates the `NAT rule`__ with the given name in the Network Firewall policy.
+
+        __ https://docs.cloud.oracle.com/iaas/Content/network-firewall/policies.htm#network-firewall-policies__nat
 
 
         :param str network_firewall_policy_id: (required)
             Unique Network Firewall Policy identifier
 
         :param str nat_rule_name: (required)
-            Unique identifier for NAT Rules in the network firewall policy.
+            Unique identifier for NAT rules in the Network Firewall policy.
 
         :param oci.network_firewall.models.UpdateNatRuleDetails update_nat_rule_details: (required)
             The information to be updated.
