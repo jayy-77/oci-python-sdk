@@ -28,6 +28,9 @@ Database
     oci.database.models.AddStandbyAutonomousContainerDatabaseDetails
     oci.database.models.AddVirtualMachineToCloudVmClusterDetails
     oci.database.models.AddVirtualMachineToVmClusterDetails
+    oci.database.models.AdvancedClusterFileSystem
+    oci.database.models.AdvancedClusterFileSystemCollection
+    oci.database.models.AdvancedClusterFileSystemSummary
     oci.database.models.AppVersionSummary
     oci.database.models.ApplicationVip
     oci.database.models.ApplicationVipSummary
@@ -157,6 +160,7 @@ Database
     oci.database.models.ConvertToPdbTargetBase
     oci.database.models.ConvertToRegularPluggableDatabaseDetails
     oci.database.models.ConvertToStandaloneDetails
+    oci.database.models.CreateAdvancedClusterFileSystemDetails
     oci.database.models.CreateApplicationVipDetails
     oci.database.models.CreateAutonomousContainerDatabaseBase
     oci.database.models.CreateAutonomousContainerDatabaseDataguardAssociationDetails
@@ -491,6 +495,7 @@ Database
     oci.database.models.UnregisterCloudAutonomousVmClusterPkcsDetails
     oci.database.models.UnregisterCloudVmClusterPkcsDetails
     oci.database.models.Update
+    oci.database.models.UpdateAdvancedClusterFileSystemDetails
     oci.database.models.UpdateAutonomousContainerDatabaseDataGuardAssociationDetails
     oci.database.models.UpdateAutonomousContainerDatabaseDetails
     oci.database.models.UpdateAutonomousDatabaseBackupDetails

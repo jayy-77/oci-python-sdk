@@ -256,7 +256,6 @@ API Reference
 * :doc:`Service Connector <sch/client/oci.sch.ServiceConnectorClient>`
 * :doc:`Service Manager Proxy <service_manager_proxy/client/oci.service_manager_proxy.ServiceManagerProxyClient>`
 * :doc:`Shape <rover/client/oci.rover.ShapeClient>`
-* :doc:`Sharded Database Service <globally_distributed_database/client/oci.globally_distributed_database.ShardedDatabaseServiceClient>`
 * :doc:`Software Source <os_management_hub/client/oci.os_management_hub.SoftwareSourceClient>`
 * :doc:`Sql Tuning <database_management/client/oci.database_management.SqlTuningClient>`
 * :doc:`Stack <dif/client/oci.dif.StackClient>`
@@ -391,7 +390,6 @@ API Reference
     generative_ai_agent_runtime
     generative_ai_inference
     generic_artifacts_content
-    globally_distributed_database
     golden_gate
     governance_rules_control_plane
     healthchecks

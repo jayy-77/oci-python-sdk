@@ -3770,7 +3770,7 @@ class GenerativeAiClient(object):
         :param list[str] capability: (optional)
             A filter to return only resources their capability matches the given capability.
 
-            Allowed values are: "TEXT_TO_TEXT", "IMAGE_TEXT_TO_TEXT", "EMBEDDING", "RERANK"
+            Allowed values are: "TEXT_TO_TEXT", "IMAGE_TEXT_TO_TEXT", "EMBEDDING", "RERANK", "TEXT_TO_IMAGE"
 
         :param str lifecycle_state: (optional)
             A filter to return only resources their lifecycleState matches the given lifecycleState.
@@ -3858,7 +3858,7 @@ class GenerativeAiClient(object):
                 f"list_imported_models got unknown kwargs: {extra_kwargs!r}")
 
         if 'capability' in kwargs:
-            capability_allowed_values = ["TEXT_TO_TEXT", "IMAGE_TEXT_TO_TEXT", "EMBEDDING", "RERANK"]
+            capability_allowed_values = ["TEXT_TO_TEXT", "IMAGE_TEXT_TO_TEXT", "EMBEDDING", "RERANK", "TEXT_TO_IMAGE"]
             for capability_item in kwargs['capability']:
                 if capability_item not in capability_allowed_values:
                     raise ValueError(
@@ -3965,7 +3965,7 @@ class GenerativeAiClient(object):
         :param list[str] capability: (optional)
             A filter to return only resources their capability matches the given capability.
 
-            Allowed values are: "TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK"
+            Allowed values are: "TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK", "TEXT_TO_IMAGE"
 
         :param str lifecycle_state: (optional)
             A filter to return only resources their lifecycleState matches the given lifecycleState.
@@ -4053,7 +4053,7 @@ class GenerativeAiClient(object):
                 f"list_models got unknown kwargs: {extra_kwargs!r}")
 
         if 'capability' in kwargs:
-            capability_allowed_values = ["TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK"]
+            capability_allowed_values = ["TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK", "TEXT_TO_IMAGE"]
             for capability_item in kwargs['capability']:
                 if capability_item not in capability_allowed_values:
                     raise ValueError(

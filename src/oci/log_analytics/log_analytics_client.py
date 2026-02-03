@@ -131,10 +131,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_entity_id: (required)
-            The log analytics entity OCID.
+            The log analytics entity ID [OCID]. Entity ID can be obtained by running 'oci log-analytics entity list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the entity ID.
 
         :param oci.log_analytics.models.AddEntityAssociationDetails add_entity_association_details: (required)
             This parameter specifies the destination entity OCIDs with which associations are to be created.
@@ -266,7 +266,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -392,7 +392,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str lookup_name: (required)
             The name of the lookup to operate on.
@@ -579,7 +579,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.AssignEncryptionKeyDetails assign_encryption_key_details: (required)
             This is the input to assign customer encryption key.
@@ -708,7 +708,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.LabelNames basic_details: (required)
             List of label names to get information on
@@ -870,10 +870,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str work_request_id: (required)
-            Work Request Identifier `OCID]`__ for the asynchronous request.
+            Work Request Identifier `OCID]`__ for the asynchronous request. The work request id can be usually obtained from the 'opc-work-request-id' response header of the asynchronous request.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -988,10 +988,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str ingest_time_rule_id: (required)
-            Unique ocid of the ingest time rule.
+            Unique ocid of the ingest time rule. Ingest time rule ID can be obtained by running 'oci log-analytics ingest-time-rule list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the rule ID.
 
         :param oci.log_analytics.models.ChangeIngestTimeRuleCompartmentDetails change_ingest_time_rule_compartment_details: (required)
             The compartment id to move the ingest time rule to.
@@ -1123,10 +1123,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_em_bridge_id: (required)
-            The log analytics enterprise manager bridge OCID.
+            The log analytics enterprise manager bridge OCID. Bridge ID can be obtained by running 'oci log-analytics em-bridge list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the bridge ID.
 
         :param oci.log_analytics.models.ChangeLogAnalyticsEmBridgeCompartmentDetails change_log_analytics_em_bridge_compartment_details: (required)
             Log analytics enterprise manager bridge compartment Id to be updated.
@@ -1258,10 +1258,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_entity_id: (required)
-            The log analytics entity OCID.
+            The log analytics entity ID [OCID]. Entity ID can be obtained by running 'oci log-analytics entity list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the entity ID.
 
         :param oci.log_analytics.models.ChangeLogAnalyticsEntityCompartmentDetails change_log_analytics_entity_compartment_details: (required)
             Log analytics entity compartment Id to be updated.
@@ -1393,7 +1393,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_log_group_id: (required)
             unique logAnalytics log group identifier
@@ -1528,10 +1528,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_object_collection_rule_id: (required)
-            The Logging Analytics Object Collection Rule `OCID`__.
+            The Log Analytics Object Collection Rule `OCID`__.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -1653,7 +1653,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str lookup_name: (required)
             The name of the lookup to operate on.
@@ -1788,7 +1788,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str scheduled_task_id: (required)
             Unique scheduledTask id returned from task create.
@@ -1923,7 +1923,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str scheduled_task_id: (required)
             Unique scheduledTask id returned from task create.
@@ -2059,7 +2059,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.CompareContentDetails compare_content_details: (required)
             The two payloads to be compared.
@@ -2173,7 +2173,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.CreateIngestTimeRuleDetails create_ingest_time_rule_details: (required)
             Details of the new ingest time rule.
@@ -2297,7 +2297,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.CreateLogAnalyticsEmBridgeDetails create_log_analytics_em_bridge_details: (required)
             Details for the enterprise manager bridge.
@@ -2421,7 +2421,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.CreateLogAnalyticsEntityDetails create_log_analytics_entity_details: (required)
             Details for the new log analytics entity.
@@ -2545,7 +2545,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.CreateLogAnalyticsEntityTypeDetails create_log_analytics_entity_type_details: (required)
             Definition for custom log analytics entity type.
@@ -2667,7 +2667,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.CreateLogAnalyticsLogGroupDetails create_log_analytics_log_group_details: (required)
             Details for the new Log-Analytics group.
@@ -2791,7 +2791,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.CreateLogAnalyticsObjectCollectionRuleDetails create_log_analytics_object_collection_rule_details: (required)
             Details of the rule to be created.
@@ -2903,7 +2903,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.CreateScheduledTaskDetails create_scheduled_task_details: (required)
             Scheduled task to be created.
@@ -3025,7 +3025,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.DeleteLogAnalyticsAssociationDetails delete_log_analytics_association_details: (required)
             details for association
@@ -3147,10 +3147,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str field_name: (required)
-            The field name.
+            The field name. Field name can be obtained by running 'oci log-analytics field list-fields --namespace-name <namespace>'. The json output 'name' parameter value contains the field name.
 
         :param str opc_retry_token: (optional)
             A token that uniquely identifies a request so it can be retried in case of a timeout or
@@ -3273,10 +3273,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str ingest_time_rule_id: (required)
-            Unique ocid of the ingest time rule.
+            Unique ocid of the ingest time rule. Ingest time rule ID can be obtained by running 'oci log-analytics ingest-time-rule list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the rule ID.
 
         :param str if_match: (optional)
             For optimistic concurrency control. In the PUT or DELETE call
@@ -3389,10 +3389,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str label_name: (required)
-            The label name.
+            The label name. Label name can be obtained by running 'oci log-analytics label list-labels --namespace-name <namespace>'. The json output 'name' parameter value contains the label name.
 
         :param str opc_retry_token: (optional)
             A token that uniquely identifies a request so it can be retried in case of a timeout or
@@ -3515,10 +3515,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_em_bridge_id: (required)
-            The log analytics enterprise manager bridge OCID.
+            The log analytics enterprise manager bridge OCID. Bridge ID can be obtained by running 'oci log-analytics em-bridge list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the bridge ID.
 
         :param str if_match: (optional)
             For optimistic concurrency control. In the PUT or DELETE call
@@ -3640,10 +3640,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_entity_id: (required)
-            The log analytics entity OCID.
+            The log analytics entity ID [OCID]. Entity ID can be obtained by running 'oci log-analytics entity list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the entity ID.
 
         :param str if_match: (optional)
             For optimistic concurrency control. In the PUT or DELETE call
@@ -3765,10 +3765,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str entity_type_name: (required)
-            Log analytics entity type name.
+            Log analytics entity type name. Entity type name can be obtained by running 'oci log-analytics entity-type list --namespace-name <namespacename> --all'. The json output 'internal-name' parameter value contains the entity type name.
 
         :param str if_match: (optional)
             For optimistic concurrency control. In the PUT or DELETE call
@@ -3879,7 +3879,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_log_group_id: (required)
             unique logAnalytics log group identifier
@@ -3992,14 +3992,14 @@ class LogAnalyticsClient(object):
     def delete_log_analytics_object_collection_rule(self, namespace_name, log_analytics_object_collection_rule_id, **kwargs):
         """
         Deletes the configured object storage bucket based collection rule and stop the log collection.
-        It will not delete the existing processed data associated with this bucket from logging analytics storage.
+        It will not delete the existing processed data associated with this bucket from Log Analytics Storage.
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_object_collection_rule_id: (required)
-            The Logging Analytics Object Collection Rule `OCID`__.
+            The Log Analytics Object Collection Rule `OCID`__.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -4112,7 +4112,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str lookup_name: (required)
             The name of the lookup to operate on.
@@ -4249,7 +4249,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str parser_name: (required)
             The parser name.
@@ -4375,7 +4375,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str scheduled_task_id: (required)
             Unique scheduledTask id returned from task create.
@@ -4492,7 +4492,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -4619,7 +4619,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str upload_reference: (required)
             Unique internal identifier to refer upload container.
@@ -4734,7 +4734,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str upload_reference: (required)
             Unique internal identifier to refer upload container.
@@ -4843,7 +4843,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str upload_reference: (required)
             Unique internal identifier to refer upload container.
@@ -4952,7 +4952,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -5068,7 +5068,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -5194,10 +5194,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str ingest_time_rule_id: (required)
-            Unique ocid of the ingest time rule.
+            Unique ocid of the ingest time rule. Ingest time rule ID can be obtained by running 'oci log-analytics ingest-time-rule list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the rule ID.
 
         :param str if_match: (optional)
             For optimistic concurrency control. In the PUT or DELETE call
@@ -5310,7 +5310,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -5436,7 +5436,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -5552,7 +5552,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -5678,10 +5678,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str ingest_time_rule_id: (required)
-            Unique ocid of the ingest time rule.
+            Unique ocid of the ingest time rule. Ingest time rule ID can be obtained by running 'oci log-analytics ingest-time-rule list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the rule ID.
 
         :param str if_match: (optional)
             For optimistic concurrency control. In the PUT or DELETE call
@@ -5794,7 +5794,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -5920,7 +5920,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.EstimatePurgeDataSizeDetails estimate_purge_data_size_details: (required)
             This is the input to estimate the size of data to be purged.
@@ -6053,7 +6053,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.EstimateRecallDataSizeDetails estimate_recall_data_size_details: (required)
             This is the input to estimate the size of data to be recalled.
@@ -6167,7 +6167,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.EstimateReleaseDataSizeDetails estimate_release_data_size_details: (required)
             This is the input to estimate the size of recalled data to be released.
@@ -6281,7 +6281,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.ExportContent export_custom_content_details: (required)
             content to export
@@ -6349,7 +6349,7 @@ class LogAnalyticsClient(object):
                 raise ValueError(f'Parameter {k} cannot be None, whitespace or empty string')
 
         header_params = {
-            "accept": "application/octet-stream",
+            "accept": "application/octet-stream, application/json",
             "content-type": "application/json",
             "opc-retry-token": kwargs.get("opc_retry_token", missing),
             "opc-request-id": kwargs.get("opc_request_id", missing)
@@ -6405,7 +6405,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.ExportDetails export_details: (required)
             Query to be exported
@@ -6519,7 +6519,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.LogAnalyticsParser logan_parser_details: (required)
             parser definition
@@ -6527,7 +6527,7 @@ class LogAnalyticsClient(object):
         :param str parser_type: (optional)
             The parser type - possible values are XML, JSON or DELIMITED.
 
-            Allowed values are: "XML", "JSON", "DELIMITED"
+            Allowed values are: "XML", "JSON", "DELIMITED", "REGEX"
 
         :param str opc_retry_token: (optional)
             A token that uniquely identifies a request so it can be retried in case of a timeout or
@@ -6593,7 +6593,7 @@ class LogAnalyticsClient(object):
                 raise ValueError(f'Parameter {k} cannot be None, whitespace or empty string')
 
         if 'parser_type' in kwargs:
-            parser_type_allowed_values = ["XML", "JSON", "DELIMITED"]
+            parser_type_allowed_values = ["XML", "JSON", "DELIMITED", "REGEX"]
             if kwargs['parser_type'] not in parser_type_allowed_values:
                 raise ValueError(
                     f"Invalid value for `parser_type`, must be one of { parser_type_allowed_values }"
@@ -6663,7 +6663,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.LogAnalyticsParser logan_parser_details: (required)
             parser definition
@@ -6671,7 +6671,7 @@ class LogAnalyticsClient(object):
         :param str parser_type: (optional)
             The parser type - possible values are XML, JSON or DELIMITED.
 
-            Allowed values are: "XML", "JSON", "DELIMITED"
+            Allowed values are: "XML", "JSON", "DELIMITED", "REGEX"
 
         :param str opc_retry_token: (optional)
             A token that uniquely identifies a request so it can be retried in case of a timeout or
@@ -6737,7 +6737,7 @@ class LogAnalyticsClient(object):
                 raise ValueError(f'Parameter {k} cannot be None, whitespace or empty string')
 
         if 'parser_type' in kwargs:
-            parser_type_allowed_values = ["XML", "JSON", "DELIMITED"]
+            parser_type_allowed_values = ["XML", "JSON", "DELIMITED", "REGEX"]
             if kwargs['parser_type'] not in parser_type_allowed_values:
                 raise ValueError(
                     f"Invalid value for `parser_type`, must be one of { parser_type_allowed_values }"
@@ -6807,7 +6807,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.FilterDetails filter_details: (required)
             Query string and filters to add or remove
@@ -6921,7 +6921,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -7036,7 +7036,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str category_name: (required)
             The category name.
@@ -7145,7 +7145,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str sql_query: (required)
             The SQL query from which column names are to be extracted.
@@ -7270,10 +7270,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str work_request_id: (required)
-            Work Request Identifier `OCID]`__ for the asynchronous request.
+            Work Request Identifier `OCID]`__ for the asynchronous request. The work request id can be usually obtained from the 'opc-work-request-id' response header of the asynchronous request.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -7381,10 +7381,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str field_name: (required)
-            The field name.
+            The field name. Field name can be obtained by running 'oci log-analytics field list-fields --namespace-name <namespace>'. The json output 'name' parameter value contains the field name.
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -7490,10 +7490,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str field_name: (required)
-            The field name.
+            The field name. Field name can be obtained by running 'oci log-analytics field list-fields --namespace-name <namespace>'. The json output 'name' parameter value contains the field name.
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -7599,7 +7599,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param bool is_show_detail: (optional)
             A boolean indicating whether or not to display detailed field summary information
@@ -7715,10 +7715,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str ingest_time_rule_id: (required)
-            Unique ocid of the ingest time rule.
+            Unique ocid of the ingest time rule. Ingest time rule ID can be obtained by running 'oci log-analytics ingest-time-rule list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the rule ID.
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -7824,10 +7824,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str label_name: (required)
-            The label name.
+            The label name. Label name can be obtained by running 'oci log-analytics label list-labels --namespace-name <namespace>'. The json output 'name' parameter value contains the label name.
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -7933,7 +7933,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -8038,10 +8038,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_em_bridge_id: (required)
-            The log analytics enterprise manager bridge OCID.
+            The log analytics enterprise manager bridge OCID. Bridge ID can be obtained by running 'oci log-analytics em-bridge list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the bridge ID.
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -8145,7 +8145,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -8258,7 +8258,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -8371,10 +8371,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_entity_id: (required)
-            The log analytics entity OCID.
+            The log analytics entity ID [OCID]. Entity ID can be obtained by running 'oci log-analytics entity list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the entity ID.
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -8489,10 +8489,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str entity_type_name: (required)
-            Log analytics entity type name.
+            Log analytics entity type name. Entity type name can be obtained by running 'oci log-analytics entity-type list --namespace-name <namespacename> --all'. The json output 'internal-name' parameter value contains the entity type name.
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -8596,7 +8596,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_log_group_id: (required)
             unique logAnalytics log group identifier
@@ -8705,7 +8705,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -8820,10 +8820,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_object_collection_rule_id: (required)
-            The Logging Analytics Object Collection Rule `OCID`__.
+            The Log Analytics Object Collection Rule `OCID`__.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -8931,7 +8931,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -9036,7 +9036,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str lookup_name: (required)
             The name of the lookup to operate on.
@@ -9145,7 +9145,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -9257,11 +9257,11 @@ class LogAnalyticsClient(object):
 
     def get_namespace(self, namespace_name, **kwargs):
         """
-        This API gets the namespace details of a tenancy already onboarded in Logging Analytics Application
+        This API gets the namespace details of a tenancy already onboarded in Log Analytics Application
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -9366,7 +9366,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str parser_name: (required)
             The parser name.
@@ -9475,7 +9475,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -9580,7 +9580,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str sort_order: (optional)
             The sort order to use, either ascending (`ASC`) or descending (`DESC`).
@@ -9730,7 +9730,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str work_request_id: (required)
             Work Request Identifier `OCID]`__ for the asynchronous request.
@@ -9881,10 +9881,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str work_request_id: (required)
-            Work Request Identifier `OCID]`__ for the asynchronous request.
+            Work Request Identifier `OCID]`__ for the asynchronous request. The work request id can be usually obtained from the 'opc-work-request-id' response header of the asynchronous request.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -9992,7 +9992,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -10097,7 +10097,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -10218,7 +10218,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -10333,7 +10333,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str scheduled_task_id: (required)
             Unique scheduledTask id returned from task create.
@@ -10443,7 +10443,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -10562,7 +10562,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -10667,7 +10667,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -10773,7 +10773,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -10879,12 +10879,12 @@ class LogAnalyticsClient(object):
 
 
         :param str work_request_id: (required)
-            Work Request Identifier `OCID]`__ for the asynchronous request.
+            Work Request Identifier `OCID]`__ for the asynchronous request. The work request id can be usually obtained from the 'opc-work-request-id' response header of the asynchronous request.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -10990,7 +10990,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str template_id: (required)
             Unique ocid of the template.
@@ -11099,7 +11099,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -11204,7 +11204,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str upload_reference: (required)
             Unique internal identifier to refer upload container.
@@ -11313,10 +11313,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str work_request_id: (required)
-            Work Request Identifier `OCID]`__ for the asynchronous request.
+            Work Request Identifier `OCID]`__ for the asynchronous request. The work request id can be usually obtained from the 'opc-work-request-id' response header of the asynchronous request.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -11422,7 +11422,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param stream import_custom_content_file_body: (required)
             The file to upload which contains the custom content.
@@ -11594,7 +11594,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -11771,10 +11771,13 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
+
+        :param str source_name: (optional)
+            The source name.
 
         :param str entity_id: (optional)
             The entity OCID.
@@ -11840,6 +11843,7 @@ class LogAnalyticsClient(object):
             "allow_control_chars",
             "enable_strict_url_encoding",
             "retry_strategy",
+            "source_name",
             "entity_id",
             "entity_type",
             "entity_type_display_name",
@@ -11879,6 +11883,7 @@ class LogAnalyticsClient(object):
                 )
 
         query_params = {
+            "sourceName": kwargs.get("source_name", missing),
             "entityId": kwargs.get("entity_id", missing),
             "entityType": kwargs.get("entity_type", missing),
             "entityTypeDisplayName": kwargs.get("entity_type_display_name", missing),
@@ -11941,7 +11946,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -12094,7 +12099,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str category_type: (optional)
             A comma-separated list of category types used for filtering. Only categories of the
@@ -12261,7 +12266,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -12408,7 +12413,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str agent_id: (optional)
             The agent ocid.
@@ -12592,7 +12597,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -12697,10 +12702,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_entity_id: (required)
-            The log analytics entity OCID.
+            The log analytics entity ID [OCID]. Entity ID can be obtained by running 'oci log-analytics entity list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the entity ID.
 
         :param str direct_or_all_associations: (optional)
             Indicates whether to return direct associated entities or direct and inferred associated entities.
@@ -12863,10 +12868,13 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
+
+        :param str source_name: (optional)
+            The source name.
 
         :param str entity_id: (optional)
             The entity OCID.
@@ -12941,6 +12949,7 @@ class LogAnalyticsClient(object):
             "allow_control_chars",
             "enable_strict_url_encoding",
             "retry_strategy",
+            "source_name",
             "entity_id",
             "entity_type",
             "entity_type_display_name",
@@ -12989,6 +12998,7 @@ class LogAnalyticsClient(object):
                 )
 
         query_params = {
+            "sourceName": kwargs.get("source_name", missing),
             "entityId": kwargs.get("entity_id", missing),
             "entityType": kwargs.get("entity_type", missing),
             "entityTypeDisplayName": kwargs.get("entity_type_display_name", missing),
@@ -13053,7 +13063,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param bool is_match_all: (optional)
             A flag indicating how to handle filtering when multiple filter criteria are specified.
@@ -13260,7 +13270,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -13461,7 +13471,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param int limit: (optional)
             The maximum number of items to return.
@@ -13582,7 +13592,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str label_name: (optional)
             The label name used for filtering.  Only items with, or associated with, the
@@ -13737,7 +13747,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str label_name: (optional)
             The label name used for filtering.  Only items with, or associated with, the
@@ -13780,7 +13790,7 @@ class LogAnalyticsClient(object):
         :param str label_sort_by: (optional)
             The attribute used to sort the returned labels
 
-            Allowed values are: "name", "priority", "sourceUsing"
+            Allowed values are: "name", "priority", "sourceUsing", "timeUpdated"
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -13868,7 +13878,7 @@ class LogAnalyticsClient(object):
                 )
 
         if 'label_sort_by' in kwargs:
-            label_sort_by_allowed_values = ["name", "priority", "sourceUsing"]
+            label_sort_by_allowed_values = ["name", "priority", "sourceUsing", "timeUpdated"]
             if kwargs['label_sort_by'] not in label_sort_by_allowed_values:
                 raise ValueError(
                     f"Invalid value for `label_sort_by`, must be one of { label_sort_by_allowed_values }"
@@ -13939,7 +13949,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -14132,7 +14142,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -14421,10 +14431,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_entity_id: (required)
-            The log analytics entity OCID.
+            The log analytics entity ID [OCID]. Entity ID can be obtained by running 'oci log-analytics entity list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the entity ID.
 
         :param str lifecycle_state: (optional)
             A filter to return only those log analytics entities with the specified lifecycle state. The state
@@ -14599,7 +14609,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str name: (optional)
             A filter to return only log analytics entity types whose name matches the entire name given. The match is
@@ -14788,7 +14798,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -14947,7 +14957,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -15120,7 +15130,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -15260,7 +15270,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str type: (required)
             The lookup type.  Valid values are Lookup, Dictionary or Module.
@@ -15472,7 +15482,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param int limit: (optional)
             The maximum number of items to return.
@@ -15618,7 +15628,7 @@ class LogAnalyticsClient(object):
     def list_namespaces(self, compartment_id, **kwargs):
         """
         Given a tenancy OCID, this API returns the namespace of the tenancy if it is valid and subscribed to the region.  The
-        result also indicates if the tenancy is onboarded with Logging Analytics.
+        result also indicates if the tenancy is onboarded with Log Analytics.
 
 
         :param str compartment_id: (required)
@@ -15626,6 +15636,9 @@ class LogAnalyticsClient(object):
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
+
+        :param bool is_compartment_delete: (optional)
+            if true, the request is from compartment delete service.
 
         :param obj retry_strategy: (optional)
             A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
@@ -15661,7 +15674,8 @@ class LogAnalyticsClient(object):
             "allow_control_chars",
             "enable_strict_url_encoding",
             "retry_strategy",
-            "opc_request_id"
+            "opc_request_id",
+            "is_compartment_delete"
         ]
         extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
         if extra_kwargs:
@@ -15669,7 +15683,8 @@ class LogAnalyticsClient(object):
                 f"list_namespaces got unknown kwargs: {extra_kwargs!r}")
 
         query_params = {
-            "compartmentId": compartment_id
+            "compartmentId": compartment_id,
+            "isCompartmentDelete": kwargs.get("is_compartment_delete", missing)
         }
         query_params = {k: v for (k, v) in six.iteritems(query_params) if v is not missing and v is not None}
 
@@ -15722,7 +15737,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -15882,7 +15897,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str name: (optional)
             The parser action name used for filtering.
@@ -16041,7 +16056,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str parser_name: (optional)
             The parser name used for filtering.
@@ -16195,7 +16210,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param int limit: (optional)
             The maximum number of items to return.
@@ -16344,7 +16359,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param bool is_match_all: (optional)
             A flag indicating how to handle filtering when multiple filter criteria are specified.
@@ -16564,7 +16579,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str name: (optional)
             The property name used for filtering.
@@ -16734,7 +16749,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -16901,7 +16916,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -17061,7 +17076,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -17227,7 +17242,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str categories: (optional)
             A comma-separated list of categories used for filtering
@@ -17398,7 +17413,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -17592,7 +17607,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str task_type: (required)
             Required parameter to specify schedule task type.
@@ -17784,7 +17799,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The souce name used for filtering associations.
@@ -17794,6 +17809,9 @@ class LogAnalyticsClient(object):
 
         :param str entity_id: (optional)
             The entity OCID.
+
+        :param str entity_name: (optional)
+            The entity name used for filtering.
 
         :param str life_cycle_state: (optional)
             The life cycle state used for filtering.  Only associations with the specified
@@ -17858,6 +17876,7 @@ class LogAnalyticsClient(object):
             "enable_strict_url_encoding",
             "retry_strategy",
             "entity_id",
+            "entity_name",
             "life_cycle_state",
             "is_show_total",
             "opc_request_id",
@@ -17905,6 +17924,7 @@ class LogAnalyticsClient(object):
         query_params = {
             "sourceName": source_name,
             "entityId": kwargs.get("entity_id", missing),
+            "entityName": kwargs.get("entity_name", missing),
             "lifeCycleState": kwargs.get("life_cycle_state", missing),
             "isShowTotal": kwargs.get("is_show_total", missing),
             "compartmentId": compartment_id,
@@ -17966,7 +17986,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -18146,7 +18166,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -18299,7 +18319,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param int limit: (optional)
             The maximum number of items to return.
@@ -18448,7 +18468,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param int limit: (optional)
             The maximum number of items to return.
@@ -18597,7 +18617,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -18755,7 +18775,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -18774,6 +18794,12 @@ class LogAnalyticsClient(object):
             all (for all items, regardless of system value).
 
             Allowed values are: "ALL", "CUSTOM", "BUILT_IN"
+
+        :param str lifecycle_state: (optional)
+            The source lifecycle state used for filtering. Currently supported
+            values are ACTIVE and DELETED.
+
+            Allowed values are: "ACTIVE", "DELETED", "ALL"
 
         :param bool is_auto_associated: (optional)
             An auto-associate flag used for filtering.  Only sources which are marked for automatic
@@ -18855,6 +18881,7 @@ class LogAnalyticsClient(object):
             "entity_type",
             "source_display_text",
             "is_system",
+            "lifecycle_state",
             "is_auto_associated",
             "sort_order",
             "sort_by",
@@ -18889,6 +18916,13 @@ class LogAnalyticsClient(object):
                     f"Invalid value for `is_system`, must be one of { is_system_allowed_values }"
                 )
 
+        if 'lifecycle_state' in kwargs:
+            lifecycle_state_allowed_values = ["ACTIVE", "DELETED", "ALL"]
+            if kwargs['lifecycle_state'] not in lifecycle_state_allowed_values:
+                raise ValueError(
+                    f"Invalid value for `lifecycle_state`, must be one of { lifecycle_state_allowed_values }"
+                )
+
         if 'sort_order' in kwargs:
             sort_order_allowed_values = ["ASC", "DESC"]
             if kwargs['sort_order'] not in sort_order_allowed_values:
@@ -18907,6 +18941,7 @@ class LogAnalyticsClient(object):
             "entityType": kwargs.get("entity_type", missing),
             "sourceDisplayText": kwargs.get("source_display_text", missing),
             "isSystem": kwargs.get("is_system", missing),
+            "lifecycleState": kwargs.get("lifecycle_state", missing),
             "isAutoAssociated": kwargs.get("is_auto_associated", missing),
             "sortOrder": kwargs.get("sort_order", missing),
             "sortBy": kwargs.get("sort_by", missing),
@@ -18975,12 +19010,12 @@ class LogAnalyticsClient(object):
             The ID of the compartment in which to list resources.
 
         :param str work_request_id: (required)
-            Work Request Identifier `OCID]`__ for the asynchronous request.
+            Work Request Identifier `OCID]`__ for the asynchronous request. The work request id can be usually obtained from the 'opc-work-request-id' response header of the asynchronous request.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -19134,7 +19169,7 @@ class LogAnalyticsClient(object):
             The ID of the compartment in which to list resources.
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -19159,7 +19194,7 @@ class LogAnalyticsClient(object):
         :param str operation_type: (optional)
             The is the work request type query parameter
 
-            Allowed values are: "OFFBOARD_TENANCY", "PURGE_STORAGE_DATA", "RECALL_ARCHIVED_STORAGE_DATA", "RELEASE_RECALLED_STORAGE_DATA", "PURGE_ARCHIVAL_DATA", "ARCHIVE_STORAGE_DATA", "CLEANUP_ARCHIVAL_STORAGE_DATA", "ENCRYPT_ACTIVE_DATA", "ENCRYPT_ARCHIVAL_DATA"
+            Allowed values are: "OFFBOARD_TENANCY", "PURGE_STORAGE_DATA", "RECALL_ARCHIVED_STORAGE_DATA", "RELEASE_RECALLED_STORAGE_DATA", "PURGE_ARCHIVAL_DATA", "ARCHIVE_STORAGE_DATA", "CLEANUP_ARCHIVAL_STORAGE_DATA", "ENCRYPT_ACTIVE_DATA", "ENCRYPT_ARCHIVAL_DATA", "ENCRYPT_ALL_DATA"
 
         :param str status: (optional)
             The is the work request status query parameter
@@ -19254,7 +19289,7 @@ class LogAnalyticsClient(object):
                 )
 
         if 'operation_type' in kwargs:
-            operation_type_allowed_values = ["OFFBOARD_TENANCY", "PURGE_STORAGE_DATA", "RECALL_ARCHIVED_STORAGE_DATA", "RELEASE_RECALLED_STORAGE_DATA", "PURGE_ARCHIVAL_DATA", "ARCHIVE_STORAGE_DATA", "CLEANUP_ARCHIVAL_STORAGE_DATA", "ENCRYPT_ACTIVE_DATA", "ENCRYPT_ARCHIVAL_DATA"]
+            operation_type_allowed_values = ["OFFBOARD_TENANCY", "PURGE_STORAGE_DATA", "RECALL_ARCHIVED_STORAGE_DATA", "RELEASE_RECALLED_STORAGE_DATA", "PURGE_ARCHIVAL_DATA", "ARCHIVE_STORAGE_DATA", "CLEANUP_ARCHIVAL_STORAGE_DATA", "ENCRYPT_ACTIVE_DATA", "ENCRYPT_ARCHIVAL_DATA", "ENCRYPT_ALL_DATA"]
             if kwargs['operation_type'] not in operation_type_allowed_values:
                 raise ValueError(
                     f"Invalid value for `operation_type`, must be one of { operation_type_allowed_values }"
@@ -19333,7 +19368,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param int limit: (optional)
             The maximum number of items to return.
@@ -19454,7 +19489,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param int limit: (optional)
             The maximum number of items to return.
@@ -19575,7 +19610,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -19765,7 +19800,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str upload_reference: (required)
             Unique internal identifier to refer upload container.
@@ -19939,7 +19974,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str upload_reference: (required)
             Unique internal identifier to refer upload container.
@@ -20065,7 +20100,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str name: (optional)
             Name of the upload container.
@@ -20240,7 +20275,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -20264,8 +20299,7 @@ class LogAnalyticsClient(object):
             warning message query parameter
 
         :param str entity_name: (optional)
-            The entity name used for filtering.  Only warnings associated with an entity with the
-            specified name will be returned.
+            The entity name used for filtering.
 
         :param str entity_type: (optional)
             The entity type used for filtering.  Only associations on an entity with the
@@ -20460,10 +20494,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str work_request_id: (required)
-            Work Request Identifier `OCID]`__ for the asynchronous request.
+            Work Request Identifier `OCID]`__ for the asynchronous request. The work request id can be usually obtained from the 'opc-work-request-id' response header of the asynchronous request.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -20585,10 +20619,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str work_request_id: (required)
-            Work Request Identifier `OCID]`__ for the asynchronous request.
+            Work Request Identifier `OCID]`__ for the asynchronous request. The work request id can be usually obtained from the 'opc-work-request-id' response header of the asynchronous request.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -20710,7 +20744,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str compartment_id: (required)
             The ID of the compartment in which to list resources.
@@ -20829,11 +20863,11 @@ class LogAnalyticsClient(object):
 
     def offboard_namespace(self, namespace_name, **kwargs):
         """
-        Off-boards a tenant from Logging Analytics
+        Off-boards a tenant from Log Analytics
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -20940,11 +20974,11 @@ class LogAnalyticsClient(object):
 
     def onboard_namespace(self, namespace_name, **kwargs):
         """
-        On-boards a tenant to Logging Analytics.
+        On-boards a tenant to Log Analytics.
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_retry_token: (optional)
             A token that uniquely identifies a request so it can be retried in case of a timeout or
@@ -21055,7 +21089,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.ParseQueryDetails parse_query_details: (required)
             Query string to be parsed
@@ -21169,7 +21203,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str scheduled_task_id: (required)
             Unique scheduledTask id returned from task create.
@@ -21289,7 +21323,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.PurgeStorageDataDetails purge_storage_data_details: (required)
             This is the input to purge old data.
@@ -21418,10 +21452,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str work_request_id: (required)
-            Work Request Identifier `OCID]`__ for the asynchronous request.
+            Work Request Identifier `OCID]`__ for the asynchronous request. The work request id can be usually obtained from the 'opc-work-request-id' response header of the asynchronous request.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -21536,7 +21570,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.QueryDetails query_details: (required)
             Query to be executed.
@@ -21666,7 +21700,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.RecallArchivedDataDetails recall_archived_data_details: (required)
             This is the input to recall archived data.
@@ -21797,7 +21831,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str type: (required)
             The lookup type.  Valid values are Lookup, Dictionary or Module.
@@ -22003,7 +22037,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.ReleaseRecalledDataDetails release_recalled_data_details: (required)
             This is the input to release recalled data
@@ -22132,10 +22166,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_entity_id: (required)
-            The log analytics entity OCID.
+            The log analytics entity ID [OCID]. Entity ID can be obtained by running 'oci log-analytics entity list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the entity ID.
 
         :param oci.log_analytics.models.RemoveEntityAssociationsDetails remove_entity_associations_details: (required)
             This parameter specifies the entity OCIDs with which associations are to be deleted.
@@ -22267,7 +22301,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.LogAnalyticsPreferenceDetails remove_preferences_details: (required)
             Details of the tenant preferences to delete.
@@ -22389,7 +22423,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.LogAnalyticsResourceCategoryDetails remove_resource_categories_details: (required)
             Details for removing the specified category assignments of resources.
@@ -22501,7 +22535,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str source_name: (required)
             The source name.
@@ -22627,7 +22661,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str scheduled_task_id: (required)
             Unique scheduledTask id returned from task create.
@@ -22748,7 +22782,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str scheduled_task_id: (required)
             Unique scheduledTask id returned from task create.
@@ -22884,10 +22918,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str bucket_name: (required)
-            Name of the Object Storage bucket.
+            Name of the Object Storage bucket. Bucket name can be obtained by running 'oci os bucket list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'name' parameter value contains the bucket name.
 
         :param bool is_enabled: (optional)
             The enabled flag used for filtering.  Only items with the specified enabled value
@@ -23003,7 +23037,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.SuggestDetails suggest_details: (required)
             Query string seeking suggestions for.
@@ -23117,7 +23151,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.WarningReferenceDetails warning_reference_details: (required)
             list of agent warning references to suppress
@@ -23249,7 +23283,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.TestParserPayloadDetails test_parser_payload_details: (required)
             Details for test payload
@@ -23399,7 +23433,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.WarningReferenceDetails warning_reference_details: (required)
             warnings list
@@ -23531,10 +23565,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str ingest_time_rule_id: (required)
-            Unique ocid of the ingest time rule.
+            Unique ocid of the ingest time rule. Ingest time rule ID can be obtained by running 'oci log-analytics ingest-time-rule list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the rule ID.
 
         :param oci.log_analytics.models.IngestTimeRule update_ingest_time_rule_details: (required)
             The information to be updated.
@@ -23658,10 +23692,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_em_bridge_id: (required)
-            The log analytics enterprise manager bridge OCID.
+            The log analytics enterprise manager bridge OCID. Bridge ID can be obtained by running 'oci log-analytics em-bridge list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the bridge ID.
 
         :param oci.log_analytics.models.UpdateLogAnalyticsEmBridgeDetails update_log_analytics_em_bridge_details: (required)
             Log analytics enterprise manager information to be updated.
@@ -23783,10 +23817,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_entity_id: (required)
-            The log analytics entity OCID.
+            The log analytics entity ID [OCID]. Entity ID can be obtained by running 'oci log-analytics entity list --namespace-name <namespace> --compartment-id <compartment>'. The json output 'id' parameter value contains the entity ID.
 
         :param oci.log_analytics.models.UpdateLogAnalyticsEntityDetails update_log_analytics_entity_details: (required)
             Log analytics entity information to be updated.
@@ -23908,13 +23942,13 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.UpdateLogAnalyticsEntityTypeDetails update_log_analytics_entity_type_details: (required)
             Log analytics entity type update details.
 
         :param str entity_type_name: (required)
-            Log analytics entity type name.
+            Log analytics entity type name. Entity type name can be obtained by running 'oci log-analytics entity-type list --namespace-name <namespacename> --all'. The json output 'internal-name' parameter value contains the entity type name.
 
         :param str opc_request_id: (optional)
             The client request ID for tracing.
@@ -24031,7 +24065,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_log_group_id: (required)
             unique logAnalytics log group identifier
@@ -24158,10 +24192,10 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_analytics_object_collection_rule_id: (required)
-            The Logging Analytics Object Collection Rule `OCID`__.
+            The Log Analytics Object Collection Rule `OCID`__.
 
             __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
 
@@ -24285,7 +24319,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str lookup_name: (required)
             The name of the lookup to operate on.
@@ -24422,7 +24456,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str lookup_name: (required)
             The name of the lookup to operate on.
@@ -24609,7 +24643,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.LogAnalyticsPreferenceDetails update_preferences_details: (required)
             Details of the tenant preferences to update.
@@ -24731,7 +24765,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.LogAnalyticsResourceCategoryDetails update_resource_categories_details: (required)
             Details for updating the specified category assignments of resources.
@@ -24843,7 +24877,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str scheduled_task_id: (required)
             Unique scheduledTask id returned from task create.
@@ -24972,7 +25006,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.UpdateStorageDetails update_storage_details: (required)
             This is the archiving configuration
@@ -25091,11 +25125,11 @@ class LogAnalyticsClient(object):
 
     def upload_discovery_data(self, namespace_name, upload_discovery_data_details, **kwargs):
         """
-        Accepts discovery data for processing by Logging Analytics.
+        Accepts discovery data for processing by Log Analytics.
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param stream upload_discovery_data_details: (required)
             Discovery data
@@ -25300,11 +25334,11 @@ class LogAnalyticsClient(object):
 
     def upload_log_events_file(self, namespace_name, log_group_id, upload_log_events_file_details, **kwargs):
         """
-        Accepts log events for processing by Logging Analytics.
+        Accepts log events for processing by Log Analytics.
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_group_id: (required)
             The log group OCID that gets mapped to the uploaded logs.
@@ -25503,11 +25537,11 @@ class LogAnalyticsClient(object):
 
     def upload_log_file(self, namespace_name, log_source_name, filename, opc_meta_loggrpid, upload_log_file_body, **kwargs):
         """
-        Accepts log data for processing by Logging Analytics.
+        Accepts log data for processing by Log Analytics.
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str log_source_name: (required)
             Name of the log source that will be used to process the files being uploaded.
@@ -25547,7 +25581,7 @@ class LogAnalyticsClient(object):
             The client request ID for tracing.
 
         :param str content_md5: (optional)
-            The base-64 encoded MD5 hash of the body. If the Content-MD5 header is present, Logging Analytics performs an integrity check
+            The base-64 encoded MD5 hash of the body. If the Content-MD5 header is present, Log Analytics performs an integrity check
             on the body of the HTTP request by computing the MD5 hash for the body and comparing it to the MD5 hash supplied in the header.
             If the two hashes do not match, the log data is rejected and an HTTP-400 Unmatched Content MD5 error is returned with the message:
 
@@ -25742,7 +25776,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str opc_meta_loggrpid: (required)
             The log group OCID to which the log data in this upload will be mapped to.
@@ -25922,7 +25956,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.UpsertLogAnalyticsAssociationDetails upsert_log_analytics_association_details: (required)
             list of association details
@@ -26055,7 +26089,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.UpsertLogAnalyticsFieldDetails upsert_log_analytics_field_details: (required)
             Details for the new LogAnalyticsFieldDetails.
@@ -26188,7 +26222,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.UpsertLogAnalyticsLabelDetails upsert_log_analytics_label_details: (required)
             Details for the new LogAnalyticsTagDetails.
@@ -26321,7 +26355,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.UpsertLogAnalyticsParserDetails upsert_log_analytics_parser_details: (required)
             Details for the new LoganParserDetails.
@@ -26454,7 +26488,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.UpsertLogAnalyticsSourceDetails upsert_log_analytics_source_details: (required)
             Details for the new LoganSourceDetails.
@@ -26610,7 +26644,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.UpsertLogAnalyticsAssociationDetails upsert_log_analytics_association_details: (required)
             Details for the new log analytics associations.
@@ -26778,7 +26812,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.LogAnalyticsEndpoint validate_endpoint_details: (required)
             Details of the REST endpoint configuration to validate.
@@ -26892,7 +26926,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str object_location: (required)
             Location of the log file.
@@ -27015,7 +27049,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.ValidateLabelConditionDetails validate_label_condition_details: (required)
             Details of source label condition to validate.
@@ -27129,7 +27163,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.UpsertLogAnalyticsSourceDetails upsert_log_analytics_source_details: (required)
             Details for the new LoganSourceDetails.
@@ -27276,7 +27310,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param oci.log_analytics.models.LogAnalyticsSource log_analytics_source: (required)
             Details for the new LogAnalyticsSource.
@@ -27400,7 +27434,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str object_location: (required)
             Location of the log file.
@@ -27526,7 +27560,7 @@ class LogAnalyticsClient(object):
 
 
         :param str namespace_name: (required)
-            The Logging Analytics namespace used for the request.
+            The Log Analytics namespace used for the request. The namespace can be obtained by running 'oci os ns get'
 
         :param str scheduled_task_id: (required)
             Unique scheduledTask id returned from task create.
