@@ -1410,6 +1410,422 @@ class VirtualNetworkClient(object):
                 api_reference_link=api_reference_link,
                 required_arguments=required_arguments)
 
+    def bulk_create_ipv6s(self, bulk_create_ipv6s_details, **kwargs):
+        """
+        Create new IPv6s for a VNIC or Subnet.
+
+
+        :param oci.core.models.BulkCreateIpv6sDetails bulk_create_ipv6s_details: (required)
+            Bulk Create Ipv6s.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request
+            may be rejected).
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+            If you need to contact Oracle about a particular request, please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :param bool enable_strict_url_encoding: (optional)
+            enable_strict_url_encoding is a boolean to indicate whether or not this request should enable strict url encoding for path params.
+            By default, strict url encoding for path params is disabled
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/latest/core/bulk_create_ipv6s.py.html>`__ to see an example of how to use bulk_create_ipv6s API.
+        """
+        # Required path and query arguments. These are in camelCase to replace values in service endpoints.
+        required_arguments = []
+        resource_path = "/ipv6/actions/bulkCreateIpv6s"
+        method = "POST"
+        operation_name = "bulk_create_ipv6s"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Ipv6/BulkCreateIpv6s"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "enable_strict_url_encoding",
+            "retry_strategy",
+            "opc_retry_token",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                f"bulk_create_ipv6s got unknown kwargs: {extra_kwargs!r}")
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-retry-token": kwargs.get("opc_retry_token", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_create_ipv6s_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_create_ipv6s_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+
+    def bulk_create_private_ips(self, bulk_create_private_ips_details, **kwargs):
+        """
+        Create secondary private IPv4 addresses.
+
+
+        :param oci.core.models.BulkCreatePrivateIpsDetails bulk_create_private_ips_details: (required)
+            Create private IPs details.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request
+            may be rejected).
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+            If you need to contact Oracle about a particular request, please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :param bool enable_strict_url_encoding: (optional)
+            enable_strict_url_encoding is a boolean to indicate whether or not this request should enable strict url encoding for path params.
+            By default, strict url encoding for path params is disabled
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/latest/core/bulk_create_private_ips.py.html>`__ to see an example of how to use bulk_create_private_ips API.
+        """
+        # Required path and query arguments. These are in camelCase to replace values in service endpoints.
+        required_arguments = []
+        resource_path = "/privateIps/actions/bulkCreatePrivateIps"
+        method = "POST"
+        operation_name = "bulk_create_private_ips"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/PrivateIp/BulkCreatePrivateIps"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "enable_strict_url_encoding",
+            "retry_strategy",
+            "opc_retry_token",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                f"bulk_create_private_ips got unknown kwargs: {extra_kwargs!r}")
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-retry-token": kwargs.get("opc_retry_token", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_create_private_ips_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_create_private_ips_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+
+    def bulk_delete_ipv6s(self, bulk_delete_ipv6s_details, **kwargs):
+        """
+        Unassigns and deletes IPv6s for a VNIC.
+
+
+        :param oci.core.models.BulkDeleteIpv6sDetails bulk_delete_ipv6s_details: (required)
+            Delete IPv6s details.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request
+            may be rejected).
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+            If you need to contact Oracle about a particular request, please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :param bool enable_strict_url_encoding: (optional)
+            enable_strict_url_encoding is a boolean to indicate whether or not this request should enable strict url encoding for path params.
+            By default, strict url encoding for path params is disabled
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/latest/core/bulk_delete_ipv6s.py.html>`__ to see an example of how to use bulk_delete_ipv6s API.
+        """
+        # Required path and query arguments. These are in camelCase to replace values in service endpoints.
+        required_arguments = []
+        resource_path = "/ipv6/actions/bulkDeleteIpv6s"
+        method = "POST"
+        operation_name = "bulk_delete_ipv6s"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Ipv6/BulkDeleteIpv6s"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "enable_strict_url_encoding",
+            "retry_strategy",
+            "opc_retry_token",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                f"bulk_delete_ipv6s got unknown kwargs: {extra_kwargs!r}")
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-retry-token": kwargs.get("opc_retry_token", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_delete_ipv6s_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_delete_ipv6s_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+
+    def bulk_delete_private_ips(self, bulk_delete_private_ips_details, **kwargs):
+        """
+        Unassigns and deletes secondary private IPv4s for a VNIC.
+
+
+        :param oci.core.models.BulkDeletePrivateIpsDetails bulk_delete_private_ips_details: (required)
+            Details of secondary IPv4 addresses to deleted.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request
+            may be rejected).
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+            If you need to contact Oracle about a particular request, please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :param bool enable_strict_url_encoding: (optional)
+            enable_strict_url_encoding is a boolean to indicate whether or not this request should enable strict url encoding for path params.
+            By default, strict url encoding for path params is disabled
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/latest/core/bulk_delete_private_ips.py.html>`__ to see an example of how to use bulk_delete_private_ips API.
+        """
+        # Required path and query arguments. These are in camelCase to replace values in service endpoints.
+        required_arguments = []
+        resource_path = "/privateIps/actions/bulkDeletePrivateIps"
+        method = "POST"
+        operation_name = "bulk_delete_private_ips"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/PrivateIp/BulkDeletePrivateIps"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "enable_strict_url_encoding",
+            "retry_strategy",
+            "opc_retry_token",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                f"bulk_delete_private_ips got unknown kwargs: {extra_kwargs!r}")
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-retry-token": kwargs.get("opc_retry_token", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_delete_private_ips_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_delete_private_ips_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+
     def bulk_delete_virtual_circuit_public_prefixes(self, virtual_circuit_id, bulk_delete_virtual_circuit_public_prefixes_details, **kwargs):
         """
         Removes one or more customer public IP prefixes from the specified public virtual circuit.
@@ -1506,6 +1922,424 @@ class VirtualNetworkClient(object):
                 path_params=path_params,
                 header_params=header_params,
                 body=bulk_delete_virtual_circuit_public_prefixes_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+
+    def bulk_detach_ipv6s(self, bulk_detach_ipv6s_details, **kwargs):
+        """
+        detach the specified IPv6s.
+
+
+        :param oci.core.models.BulkDetachIpv6sDetails bulk_detach_ipv6s_details: (required)
+            detach IPv6s details.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request
+            may be rejected).
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+            If you need to contact Oracle about a particular request, please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :param bool enable_strict_url_encoding: (optional)
+            enable_strict_url_encoding is a boolean to indicate whether or not this request should enable strict url encoding for path params.
+            By default, strict url encoding for path params is disabled
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/latest/core/bulk_detach_ipv6s.py.html>`__ to see an example of how to use bulk_detach_ipv6s API.
+        """
+        # Required path and query arguments. These are in camelCase to replace values in service endpoints.
+        required_arguments = []
+        resource_path = "/ipv6/actions/bulkDetachIpv6s"
+        method = "POST"
+        operation_name = "bulk_detach_ipv6s"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Ipv6/BulkDetachIpv6s"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "enable_strict_url_encoding",
+            "retry_strategy",
+            "opc_retry_token",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                f"bulk_detach_ipv6s got unknown kwargs: {extra_kwargs!r}")
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-retry-token": kwargs.get("opc_retry_token", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_detach_ipv6s_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_detach_ipv6s_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+
+    def bulk_detach_private_ips(self, bulk_detach_private_ips_details, **kwargs):
+        """
+        Unassign the specified PrivateIP address from Virtual Network Interface Card (VNIC). You must specify the PrivateIP `OCID`__.
+
+        __ https://docs.cloud.oracle.com/iaas/Content/General/Concepts/identifiers.htm
+
+
+        :param oci.core.models.BulkDetachPrivateIpsDetails bulk_detach_private_ips_details: (required)
+            Secondary IPv4 addresses to detach.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request
+            may be rejected).
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+            If you need to contact Oracle about a particular request, please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :param bool enable_strict_url_encoding: (optional)
+            enable_strict_url_encoding is a boolean to indicate whether or not this request should enable strict url encoding for path params.
+            By default, strict url encoding for path params is disabled
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/latest/core/bulk_detach_private_ips.py.html>`__ to see an example of how to use bulk_detach_private_ips API.
+        """
+        # Required path and query arguments. These are in camelCase to replace values in service endpoints.
+        required_arguments = []
+        resource_path = "/privateIps/actions/bulkDetachPrivateIps"
+        method = "POST"
+        operation_name = "bulk_detach_private_ips"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/PrivateIp/BulkDetachPrivateIps"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "enable_strict_url_encoding",
+            "retry_strategy",
+            "opc_retry_token",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                f"bulk_detach_private_ips got unknown kwargs: {extra_kwargs!r}")
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-retry-token": kwargs.get("opc_retry_token", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_detach_private_ips_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_detach_private_ips_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+
+    def bulk_update_ipv6s(self, bulk_update_ipv6s_details, **kwargs):
+        """
+        Updates the specified IPv6s.
+
+
+        :param oci.core.models.BulkUpdateIpv6sDetails bulk_update_ipv6s_details: (required)
+            Update IPv6s details.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request
+            may be rejected).
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+            If you need to contact Oracle about a particular request, please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :param bool enable_strict_url_encoding: (optional)
+            enable_strict_url_encoding is a boolean to indicate whether or not this request should enable strict url encoding for path params.
+            By default, strict url encoding for path params is disabled
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/latest/core/bulk_update_ipv6s.py.html>`__ to see an example of how to use bulk_update_ipv6s API.
+        """
+        # Required path and query arguments. These are in camelCase to replace values in service endpoints.
+        required_arguments = []
+        resource_path = "/ipv6/actions/bulkUpdateIpv6s"
+        method = "POST"
+        operation_name = "bulk_update_ipv6s"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Ipv6/BulkUpdateIpv6s"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "enable_strict_url_encoding",
+            "retry_strategy",
+            "opc_retry_token",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                f"bulk_update_ipv6s got unknown kwargs: {extra_kwargs!r}")
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-retry-token": kwargs.get("opc_retry_token", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_update_ipv6s_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_update_ipv6s_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+
+    def bulk_update_private_ips(self, bulk_update_private_ips_details, **kwargs):
+        """
+        Updates existing secondary Private IPv4s for a VNIC.
+
+
+        :param oci.core.models.BulkUpdatePrivateIpsDetails bulk_update_private_ips_details: (required)
+            Details of secondary IPv4 addresses to be updated.
+
+        :param str opc_retry_token: (optional)
+            A token that uniquely identifies a request so it can be retried in case of a timeout or
+            server error without risk of executing that same action again. Retry tokens expire after 24
+            hours, but can be invalidated before then due to conflicting operations (for example, if a resource
+            has been deleted and purged from the system, then a retry of the original creation request
+            may be rejected).
+
+        :param str opc_request_id: (optional)
+            Unique identifier for the request.
+            If you need to contact Oracle about a particular request, please provide the request ID.
+
+        :param obj retry_strategy: (optional)
+            A retry strategy to apply to this specific operation/call. This will override any retry strategy set at the client-level.
+
+            This should be one of the strategies available in the :py:mod:`~oci.retry` module. This operation uses :py:data:`~oci.retry.DEFAULT_RETRY_STRATEGY` as default if no retry strategy is provided.
+            The specifics of the default retry strategy are described `here <https://docs.oracle.com/en-us/iaas/tools/python/latest/sdk_behaviors/retries.html>`__.
+
+            To have this operation explicitly not perform any retries, pass an instance of :py:class:`~oci.retry.NoneRetryStrategy`.
+
+        :param bool allow_control_chars: (optional)
+            allow_control_chars is a boolean to indicate whether or not this request should allow control characters in the response object.
+            By default, the response will not allow control characters in strings
+
+        :param bool enable_strict_url_encoding: (optional)
+            enable_strict_url_encoding is a boolean to indicate whether or not this request should enable strict url encoding for path params.
+            By default, strict url encoding for path params is disabled
+
+        :return: A :class:`~oci.response.Response` object with data of type None
+        :rtype: :class:`~oci.response.Response`
+
+        :example:
+        Click `here <https://docs.cloud.oracle.com/en-us/iaas/tools/python-sdk-examples/latest/core/bulk_update_private_ips.py.html>`__ to see an example of how to use bulk_update_private_ips API.
+        """
+        # Required path and query arguments. These are in camelCase to replace values in service endpoints.
+        required_arguments = []
+        resource_path = "/privateIps/actions/bulkUpdatePrivateIps"
+        method = "POST"
+        operation_name = "bulk_update_private_ips"
+        api_reference_link = "https://docs.oracle.com/iaas/api/#/en/iaas/20160918/PrivateIp/BulkUpdatePrivateIps"
+
+        # Don't accept unknown kwargs
+        expected_kwargs = [
+            "allow_control_chars",
+            "enable_strict_url_encoding",
+            "retry_strategy",
+            "opc_retry_token",
+            "opc_request_id"
+        ]
+        extra_kwargs = [_key for _key in six.iterkeys(kwargs) if _key not in expected_kwargs]
+        if extra_kwargs:
+            raise ValueError(
+                f"bulk_update_private_ips got unknown kwargs: {extra_kwargs!r}")
+
+        header_params = {
+            "accept": "application/json",
+            "content-type": "application/json",
+            "opc-retry-token": kwargs.get("opc_retry_token", missing),
+            "opc-request-id": kwargs.get("opc_request_id", missing)
+        }
+        header_params = {k: v for (k, v) in six.iteritems(header_params) if v is not missing and v is not None}
+
+        retry_strategy = self.base_client.get_preferred_retry_strategy(
+            operation_retry_strategy=kwargs.get('retry_strategy'),
+            client_retry_strategy=self.retry_strategy
+        )
+        if retry_strategy is None:
+            retry_strategy = retry.DEFAULT_RETRY_STRATEGY
+
+        if retry_strategy:
+            if not isinstance(retry_strategy, retry.NoneRetryStrategy):
+                self.base_client.add_opc_retry_token_if_needed(header_params)
+                self.base_client.add_opc_client_retries_header(header_params)
+                retry_strategy.add_circuit_breaker_callback(self.circuit_breaker_callback)
+            return retry_strategy.make_retrying_call(
+                self.base_client.call_api,
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_update_private_ips_details,
+                allow_control_chars=kwargs.get('allow_control_chars'),
+                enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
+                operation_name=operation_name,
+                api_reference_link=api_reference_link,
+                required_arguments=required_arguments)
+        else:
+            return self.base_client.call_api(
+                resource_path=resource_path,
+                method=method,
+                header_params=header_params,
+                body=bulk_update_private_ips_details,
                 allow_control_chars=kwargs.get('allow_control_chars'),
                 enable_strict_url_encoding=kwargs.get('enable_strict_url_encoding'),
                 operation_name=operation_name,
