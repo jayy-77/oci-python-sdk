@@ -88,6 +88,7 @@ Fleet Software Update
     oci.fleet_software_update.models.ExadbStackDiscoveryDetails
     oci.fleet_software_update.models.ExadbStackFsuCollectionSummary
     oci.fleet_software_update.models.ExadbStackFsuGoalVersionDetails
+    oci.fleet_software_update.models.ExadbVmClusterTargetSummary
     oci.fleet_software_update.models.FailedJobsRollbackDetails
     oci.fleet_software_update.models.FiftyFiftyBatchingStrategyDetails
     oci.fleet_software_update.models.FreeformTagFilterEntry

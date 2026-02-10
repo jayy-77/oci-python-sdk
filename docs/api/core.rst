@@ -87,7 +87,23 @@ Core Services
     oci.core.models.BootVolumeSourceFromBootVolumeDetails
     oci.core.models.BootVolumeSourceFromBootVolumeReplicaDetails
     oci.core.models.BulkAddVirtualCircuitPublicPrefixesDetails
+    oci.core.models.BulkCreateIpv6sDetails
+    oci.core.models.BulkCreateIpv6sItem
+    oci.core.models.BulkCreatePrivateIpItem
+    oci.core.models.BulkCreatePrivateIpsDetails
+    oci.core.models.BulkDeleteIpv6sDetails
+    oci.core.models.BulkDeleteIpv6sItem
+    oci.core.models.BulkDeletePrivateIpItem
+    oci.core.models.BulkDeletePrivateIpsDetails
     oci.core.models.BulkDeleteVirtualCircuitPublicPrefixesDetails
+    oci.core.models.BulkDetachIpv6sDetails
+    oci.core.models.BulkDetachIpv6sItem
+    oci.core.models.BulkDetachPrivateIpItem
+    oci.core.models.BulkDetachPrivateIpsDetails
+    oci.core.models.BulkUpdateIpv6sDetails
+    oci.core.models.BulkUpdateIpv6sItem
+    oci.core.models.BulkUpdatePrivateIpItem
+    oci.core.models.BulkUpdatePrivateIpsDetails
     oci.core.models.Byoasn
     oci.core.models.ByoasnByoipRange
     oci.core.models.ByoasnCollection

@@ -99,6 +99,7 @@ Mysql
     oci.mysql.models.HeatWaveNode
     oci.mysql.models.InitializationVariables
     oci.mysql.models.MaintenanceDetails
+    oci.mysql.models.Option
     oci.mysql.models.PemCaCertificate
     oci.mysql.models.PitrPolicy
     oci.mysql.models.PointInTimeRecoveryDetails
