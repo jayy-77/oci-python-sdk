@@ -50,6 +50,22 @@ class Model(object):
     #: This constant has a value of "TEXT_TO_IMAGE"
     CAPABILITIES_TEXT_TO_IMAGE = "TEXT_TO_IMAGE"
 
+    #: A constant which can be used with the capabilities property of a Model.
+    #: This constant has a value of "TEXT_TO_TEXT"
+    CAPABILITIES_TEXT_TO_TEXT = "TEXT_TO_TEXT"
+
+    #: A constant which can be used with the capabilities property of a Model.
+    #: This constant has a value of "IMAGE_TEXT_TO_TEXT"
+    CAPABILITIES_IMAGE_TEXT_TO_TEXT = "IMAGE_TEXT_TO_TEXT"
+
+    #: A constant which can be used with the capabilities property of a Model.
+    #: This constant has a value of "EMBEDDING"
+    CAPABILITIES_EMBEDDING = "EMBEDDING"
+
+    #: A constant which can be used with the capabilities property of a Model.
+    #: This constant has a value of "RERANK"
+    CAPABILITIES_RERANK = "RERANK"
+
     #: A constant which can be used with the lifecycle_state property of a Model.
     #: This constant has a value of "ACTIVE"
     LIFECYCLE_STATE_ACTIVE = "ACTIVE"
@@ -97,7 +113,7 @@ class Model(object):
 
         :param capabilities:
             The value to assign to the capabilities property of this Model.
-            Allowed values for items in this list are: "TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK", "TEXT_TO_IMAGE", 'UNKNOWN_ENUM_VALUE'.
+            Allowed values for items in this list are: "TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK", "TEXT_TO_IMAGE", "TEXT_TO_TEXT", "IMAGE_TEXT_TO_TEXT", "EMBEDDING", "RERANK", 'UNKNOWN_ENUM_VALUE'.
             Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
         :type capabilities: list[str]
 
@@ -334,7 +350,7 @@ class Model(object):
         **[Required]** Gets the capabilities of this Model.
         Describes what this model can be used for.
 
-        Allowed values for items in this list are: "TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK", "TEXT_TO_IMAGE", 'UNKNOWN_ENUM_VALUE'.
+        Allowed values for items in this list are: "TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK", "TEXT_TO_IMAGE", "TEXT_TO_TEXT", "IMAGE_TEXT_TO_TEXT", "EMBEDDING", "RERANK", 'UNKNOWN_ENUM_VALUE'.
         Any unrecognized values returned by a service will be mapped to 'UNKNOWN_ENUM_VALUE'.
 
 
@@ -353,7 +369,7 @@ class Model(object):
         :param capabilities: The capabilities of this Model.
         :type: list[str]
         """
-        allowed_values = ["TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK", "TEXT_TO_IMAGE"]
+        allowed_values = ["TEXT_GENERATION", "TEXT_SUMMARIZATION", "TEXT_EMBEDDINGS", "FINE_TUNE", "CHAT", "TEXT_RERANK", "TEXT_TO_IMAGE", "TEXT_TO_TEXT", "IMAGE_TEXT_TO_TEXT", "EMBEDDING", "RERANK"]
         if capabilities:
             capabilities[:] = ['UNKNOWN_ENUM_VALUE' if not value_allowed_none_or_none_sentinel(x, allowed_values) else x for x in capabilities]
         self._capabilities = capabilities
