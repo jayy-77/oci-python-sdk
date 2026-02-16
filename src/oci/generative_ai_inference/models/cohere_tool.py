@@ -119,6 +119,47 @@ class CohereTool(object):
         """
         self._parameter_definitions = parameter_definitions
 
+    def _to_tool_dict(self):
+        """
+        Internal helper to expose this tool as a mapping compatible with OpenAI-style
+        tool descriptions (used by some orchestration libraries that expect dicts).
+        """
+        return {
+            "type": "function",
+            "function": {
+                "name": self.name,
+                "description": self.description,
+                # Parameter definitions are already a mapping of parameter name to
+                # CohereParameterDefinition model objects.
+                "parameters": self.parameter_definitions or {}
+            }
+        }
+
+    def get(self, key, default=None):
+        """
+        Provide a dict-like .get() so that consumers treating tools as mappings
+        (for example, some LangGraph helpers) can work with CohereTool instances.
+        """
+        return self._to_tool_dict().get(key, default)
+
+    def __getitem__(self, key):
+        return self._to_tool_dict()[key]
+
+    def items(self):
+        return self._to_tool_dict().items()
+
+    def keys(self):
+        return self._to_tool_dict().keys()
+
+    def values(self):
+        return self._to_tool_dict().values()
+
+    def __iter__(self):
+        return iter(self._to_tool_dict())
+
+    def __len__(self):
+        return len(self._to_tool_dict())
+
     def __repr__(self):
         return formatted_flat_dict(self)
 

@@ -344,6 +344,18 @@ class CohereChatRequestV2(BaseChatRequest):
         """
         self._tools = tools
 
+    def tools_as_dicts(self):
+        """
+        Helper to represent tools in a plain dict form for interoperability with
+        frameworks that expect OpenAI-style tool mappings.
+
+        :return: A list of dicts representing the tools, or None if no tools are set.
+        :rtype: list[dict] or None
+        """
+        if self._tools is None:
+            return None
+        return [t._to_tool_dict() if hasattr(t, "_to_tool_dict") else t for t in self._tools]
+
     @property
     def is_strict_tools_enabled(self):
         """
