@@ -101,7 +101,24 @@ class InvalidConfig(ClientError):
         self.errors = errors
 
     def __str__(self):
-        return str(self.errors)
+        if not isinstance(self.errors, dict):
+            return str(self.errors)
+
+        missing = sorted([k for k, v in self.errors.items() if v == "missing"])
+        malformed = sorted([k for k, v in self.errors.items() if v == "malformed"])
+        other = {k: v for k, v in self.errors.items() if v not in ("missing", "malformed")}
+
+        parts = ["Invalid OCI config."]
+        if missing:
+            parts.append("Missing required keys: {}".format(", ".join(missing)))
+        if malformed:
+            parts.append("Malformed values for keys: {}".format(", ".join(malformed)))
+        if other:
+            parts.append("Other issues: {}".format(other))
+        parts.append(
+            "Config reference: https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm"
+        )
+        return " ".join(parts)
 
 
 class InvalidAlloyConfig(ClientError):

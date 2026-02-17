@@ -9,16 +9,14 @@ This is the Python SDK for Oracle Cloud Infrastructure. Supported Python version
 
 __ https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/pythonsdk.htm#pythonsdk_topic-supported_python_versions
 
+Quickstart
+==========
+
 .. code-block:: pycon
 
     >>> import oci
-    # Set up config
-    >>> config = oci.config.from_file(
-    ...     "~/.oci/config",
-    ...     "DEFAULT")
-    # Create a service client
+    >>> config = oci.config.from_file()
     >>> identity = oci.identity.IdentityClient(config)
-    # Get the current user
     >>> user = identity.get_user(config["user"]).data
     >>> print(user)
     {
@@ -30,6 +28,26 @@ __ https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/pythonsdk.htm#pythonsd
       "name": "test-user@corp.com",
       "time_created": "2016-08-30T23:46:44.680000+00:00"
     }
+
+If you need to load a different profile or config file:
+
+.. code-block:: pycon
+
+    >>> config = oci.config.from_file("~/.oci/config", "DEFAULT")
+
+You can also point the SDK at a config file via environment variable:
+
+.. code-block:: sh
+
+    OCI_CONFIG_FILE=~/.oci/config python your_script.py
+
+Instance principals (running on an OCI compute instance) can be used without a config file:
+
+.. code-block:: python
+
+    import oci
+    signer = oci.auth.signers.InstancePrincipalsSecurityTokenSigner()
+    identity = oci.identity.IdentityClient(config={}, signer=signer)
 
 The project is open source and maintained by Oracle Corp. The home page for the project is `here`__.
 
