@@ -198,6 +198,7 @@ Core Services
     oci.core.models.ComputeGpuMemoryClusterCollection
     oci.core.models.ComputeGpuMemoryClusterInstanceCollection
     oci.core.models.ComputeGpuMemoryClusterInstanceSummary
+    oci.core.models.ComputeGpuMemoryClusterScaleConfig
     oci.core.models.ComputeGpuMemoryClusterSummary
     oci.core.models.ComputeGpuMemoryFabric
     oci.core.models.ComputeGpuMemoryFabricCollection
@@ -247,6 +248,7 @@ Core Services
     oci.core.models.CreateComputeCapacityTopologyDetails
     oci.core.models.CreateComputeClusterDetails
     oci.core.models.CreateComputeGpuMemoryClusterDetails
+    oci.core.models.CreateComputeGpuMemoryClusterScaleConfig
     oci.core.models.CreateComputeHostGroupDetails
     oci.core.models.CreateComputeImageCapabilitySchemaDetails
     oci.core.models.CreateCpeDetails
@@ -605,6 +607,7 @@ Core Services
     oci.core.models.UpdateComputeCapacityTopologyDetails
     oci.core.models.UpdateComputeClusterDetails
     oci.core.models.UpdateComputeGpuMemoryClusterDetails
+    oci.core.models.UpdateComputeGpuMemoryClusterScaleConfig
     oci.core.models.UpdateComputeGpuMemoryFabricDetails
     oci.core.models.UpdateComputeHostGroupDetails
     oci.core.models.UpdateComputeHostsDetails
